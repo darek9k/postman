@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "85ae944f-c5e8-450f-b142-f37212660528",
+		"name": "Gorest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users v1 - szkolenie",
+			"_postman_id": "e8c7f8d6-aeb3-4459-ba64-5bcc6fa74f45",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{goresturl}}/public/v1/users?page=1&per_page=20&name=A",
+					"host": [
+						"{{goresturl}}"
+					],
+					"path": [
+						"public",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "20"
+						},
+						{
+							"key": "name",
+							"value": "A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users v2- szkolenie Copy",
+			"_postman_id": "09e6a45d-7917-4edf-aa97-8d3dce6d7e9c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{goresturl}}/public/v2/users?page=1&per_page=20&active",
+					"host": [
+						"{{goresturl}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "20"
+						},
+						{
+							"key": "active",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create person",
+			"_postman_id": "73f6a3c0-f747-4e54-a0ea-d0fddeb7b830",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"imie\": \"Adam\",\n\n    \"nazwisko\": \"Ogarek\",\n\n    \"dataUrodzenia\": \"1990-02-29T12:00:00\",\n\n    \"aktywny\": true,\n\n    \"wzrost\": 187.5,\n\n    \"zainteresowania\": [\"siatkówka\",\"gitara\"],\n\n    \"adres\":{\n\n        \"kraj\":\"pl\",\n\n        \"miasto\" : \"Gdynia\"\n\n    },\n\n    \"jezyki\":[{\"symbol\":\"pl\", \"poziom\":6},{\"symbol\":\"en\", \"poziom\":4}]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/persons.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Create book",
+			"_postman_id": "2c6b34b6-fd5d-45f7-97a3-9636bfda07eb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Create book 2",
+			"_postman_id": "a1c9eee0-e333-4d78-acc3-ed00a7401c4c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Get books",
+			"_postman_id": "73351c58-0b15-437a-9fd0-ed1e30d67369",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Put book - zmiana autora",
+			"_postman_id": "f2757e21-4c7f-4a97-9214-5af191681bef",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski - kozak\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"_postman_id": "3763a869-1ec4-427b-87b3-0886f630abe1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url}}/books/-NOYNdyo1_QXEOziAHMT.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Create user - gorest",
+			"_postman_id": "2956905d-f156-47ab-8a80-d80e492c8a4c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Darek\", \"gender\":\"male\", \"email\":\"darekzegarek@jol.pl\", \"status\":\"active\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{goresturl}}/public/v2/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Create user - gorest Copy",
+			"_postman_id": "0f237346-e57a-4196-9caf-ba6ed35e735d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{goresturl}}/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT user - gorest",
+			"_postman_id": "f98a3323-4f0b-478a-a9d6-14772efeffe8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Darek123\", \"gender\":\"male\", \"email\":\"darekzegarek12@jol.pl\", \"status\":\"active\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{goresturl}}/public/v2/users/467746"
+			},
+			"response": []
+		},
+		{
+			"name": "Patch user - gorest Copy",
+			"_postman_id": "6617f524-2c4d-4a14-857f-130e19f98c7b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"darekzegarek123@jol.pl\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{goresturl}}/public/v2/users/467746"
+			},
+			"response": []
+		},
+		{
+			"name": "Put book - zmiana autora Copy",
+			"_postman_id": "4a54f146-3cc7-42cc-9202-9da86e710e27",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace - lektura\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "a87fd46e6887abde6bb4bd35a1e2b70aa63e099aec889e6f247ef04450a96b48"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "24439628-9a7d-47c7-9b76-bb6ea106eee3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f0b61eb6-73fd-443e-b8de-917e22c1e14d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
