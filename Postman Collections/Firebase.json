@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "018bc140-0a56-474c-950d-63ed4b9b1cf5",
+		"name": "Firebase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create person",
+			"_postman_id": "9db20365-9b6c-4b02-8bd6-65d7b1795968",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"imie\": \"Adam\",\n\n    \"nazwisko\": \"Ogarek\",\n\n    \"dataUrodzenia\": \"1990-02-29T12:00:00\",\n\n    \"aktywny\": true,\n\n    \"wzrost\": 187.5,\n\n    \"zainteresowania\": [\"siatkówka\",\"gitara\"],\n\n    \"adres\":{\n\n        \"kraj\":\"pl\",\n\n        \"miasto\" : \"Gdynia\"\n\n    },\n\n    \"jezyki\":[{\"symbol\":\"pl\", \"poziom\":6},{\"symbol\":\"en\", \"poziom\":4}]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/persons.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Create book",
+			"_postman_id": "a3a0d6c6-3b7e-4ca4-b42b-bbda5307b084",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Create book 2",
+			"_postman_id": "c04b2ce2-26d2-4317-9fd1-45286e96ad0b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Get person",
+			"_postman_id": "cf79929b-9ceb-4ae0-b5ad-41e8b1d43311",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/persons/-NOVGgOEIeL04DJcVKsw.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Get books",
+			"_postman_id": "d5bb1cb1-338f-4c58-9f89-1e383200a9cd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Put book - zmiana autora",
+			"_postman_id": "0737e5ba-bcad-4853-b114-6052976fe452",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace\",\n    \"autor\": \"Sefan Żeromski - kozak\",\n    \"liczbaStron\": 168,\n    \"spisTreści\": [\n        {\n            \"nazwaRozdziału\":\"RozdziaI\",\n            \"numerStrony\": 2\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaII\",\n            \"numerStrony\": 17\n        },\n        {   \n            \"nazwaRozdziału\":\"RozdziaIII\",\n            \"numerStrony\": 31\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaIV\",\n            \"numerStrony\": 44\n        },\n        {\n            \"nazwaRozdziału\":\"RozdziaV\",\n            \"numerStrony\": 56\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"_postman_id": "84ea4dd7-080e-4b3a-93cb-2fcce5abaa41",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url}}/books/-NOYNdyo1_QXEOziAHMT.json"
+			},
+			"response": []
+		},
+		{
+			"name": "Put book - zmiana autora Copy",
+			"_postman_id": "b7f89ad8-b46a-4039-9ba8-7f1cbc010749",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tytuł\": \"Syzyfowe prace - lektura\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books.json"
+			},
+			"response": []
+		}
+	]
+}
