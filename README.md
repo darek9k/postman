@@ -137,3 +137,88 @@ No response is returned for this request.
 ### Response
 No response is returned for this request.
 
+# Gorest API Documentation
+
+This repository contains the documentation for the Gorest API.
+
+## Endpoints
+
+Below are the available endpoints provided by the Gorest API:
+
+### Get users v1 - szkolenie
+
+```http
+GET {{goresturl}}/public/v1/users?page=1&per_page=20&name=A
+```
+
+Retrieve a list of users from the v1 API version. You can specify the page number, the number of users per page, and filter by name.
+
+### Get users v2- szkolenie Copy
+
+```http
+GET {{goresturl}}/public/v2/users?page=1&per_page=20&active
+```
+
+Retrieve a list of users from the v2 API version. You can specify the page number, the number of users per page, and filter by active status.
+
+### Create person
+
+```http
+POST {{url}}/persons.json
+```
+
+Create a new person with the specified details. The request body should be in JSON format.
+
+### Create book
+
+```http
+POST {{url}}/books.json
+```
+
+Create a new book with the specified details. The request body should be in JSON format.
+
+### Get books
+
+```http
+GET {{url}}/books.json
+```
+
+Retrieve a list of books.
+
+### Put book - zmiana autora
+
+```http
+PUT {{url}}/books.json
+```
+
+Update the author of a book with the specified details. The request body should be in JSON format.
+
+### Delete book
+
+```http
+DELETE {{url}}/books/-NOYNdyo1_QXEOziAHMT.json
+```
+
+Delete a book with the specified ID.
+
+### Create user - gorest
+
+```http
+POST {{goresturl}}/public/v2/users/
+```
+
+Create a new user with the specified details. The request body should be in JSON format.
+
+### Create user - gorest Copy
+
+```http
+POST {{goresturl}}/public/v2/users/
+```
+
+Create a new user with the specified details. The request body should be in JSON format.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
