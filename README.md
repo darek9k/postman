@@ -1,30 +1,68 @@
-Exercises on sending requests to the application via Postman.
+Firebase API
+Opis
+Repozytorium zawiera przykładowe zapytania do Firebase API. Zapytania dotyczą dodawania, edytowania i usuwania osób oraz książek w bazie danych Firebase.
+Endpointy
+Create person
+Metoda: POST
+URL: {{url}}/persons.json
+Przykładowe zapytanie:
 
->Rest API testing.
-
-Adding, editing a collections. Adding and editing requests.
-
-Using application methods to translate CRUD action to the application backend.
-```
-Create - POST
-Read - GET
-Update - PUT/PATCH
-Delete - DELETE
-```
-Checking satus code, response body and applying methods from the theory of testing to validate fields.
-
-Execution of test cases.
-
-Checking the correctness of the entered data, editing entries and deleting.
-
-JSON construction.
-```
 {
-"keyName1":"stringValue",
-"keyName2":integerValue
+    "imie": "Adam",
+    "nazwisko": "Ogarek",
+    "dataUrodzenia": "1990-02-29T12:00:00",
+    "aktywny": true,
+    "wzrost": 187.5,
+    "zainteresowania": ["siatkówka","gitara"],
+    "adres":{
+        "kraj":"pl",
+        "miasto" : "Gdynia"
+    },
+    "jezyki":[{"symbol":"pl", "poziom":6},{"symbol":"en", "poziom":4}]
 }
-```
-Setting environment variables, adding and changing request parameters - in the url address and in the Query Params fields.
-```
-127.0.0.1:8080/api/invoices?test1=value1&test2=value2
-```
+
+Create book
+Metoda: POST
+URL: {{url}}/books.json
+Przykładowe zapytanie:
+
+{
+    "tytuł": "Syzyfowe prace",
+    "autor": "Sefan Żeromski",
+    "liczbaStron": 168,
+    "spisTreści": [
+        { "nazwaRozdziału":"RozdziaI", "numerStrony": 2 },
+        { "nazwaRozdziału":"RozdziaII", "numerStrony": 17 },
+        { "nazwaRozdziału":"RozdziaIII", "numerStrony": 31 },
+        { "nazwaRozdziału":"RozdziaIV", "numerStrony": 44 },
+        { "nazwaRozdziału":"RozdziaV", "numerStrony": 56 }
+    ]
+}
+
+Get person
+Metoda: GET
+URL: {{url}}/persons/-NOVGgOEIeL04DJcVKsw.json
+Get books
+Metoda: GET
+URL: {{url}}/books.json
+Put book - zmiana autora
+Metoda: PUT
+URL: {{url}}/books.json
+Przykładowe zapytanie:
+
+{
+    "tytuł": "Syzyfowe prace",
+    "autor": "Sefan Żeromski - kozak",
+    "liczbaStron": 168,
+    "spisTreści": [
+        { "nazwaRozdziału":"RozdziaI", "numerStrony": 2 },
+        { "nazwaRozdziału":"RozdziaII", "numerStrony": 17 },
+        { "nazwaRozdziału":"RozdziaIII", "numerStrony": 31 },
+        { "nazwaRozdziału":"RozdziaIV", "numerStrony": 44 },
+        { "nazwaRozdziału":"RozdziaV", "numerStrony": 56 }
+    ]
+}
+
+Delete book
+Metoda: DELETE
+URL: {{url}}/books/-NOYNdyo1_QXEOziAHMT.json
